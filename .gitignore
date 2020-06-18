@@ -20,4 +20,4 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
-src/assets/dummy_data.json
+src/assets/data.json
