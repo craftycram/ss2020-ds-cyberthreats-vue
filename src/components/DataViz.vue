@@ -6,8 +6,24 @@
 </template>
 
 <script>
-export default {
+import axios from 'axios'
 
+export default {
+  data: function () {
+    return {
+      loadedData: undefined
+    }
+  },
+  mounted() {
+    axios.get('http://localhost:3000')
+      .then(response => {
+        this.loadedData = response.data;
+        console.log(this.loadedData.attacks[0]);
+      })
+      .catch(err => {
+        console.log(err)
+      });
+  }
 }
 </script>
 
