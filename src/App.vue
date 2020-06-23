@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import DataViz from './components/DataViz.vue'
+import DataViz from './components/DataViz3.vue'
 
 export default {
   name: 'App',
