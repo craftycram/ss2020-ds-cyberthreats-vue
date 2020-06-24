@@ -1,5 +1,6 @@
 <template>
       <div>
+        Attack from {{attack.Origin}} to {{attack.DestinationName}}
       </div>
 </template>
 
@@ -13,8 +14,9 @@ export default {
     }
   },
   mounted() {
-    this.sockets.subscribe('', (data) => {
+    this.sockets.subscribe('attack', (data) => {
       console.log(data);
+      this.attack = data;
     });
   }
 }

@@ -4,7 +4,7 @@ import VueSocketIO from 'vue-socket.io'
 
 Vue.use(new VueSocketIO({
   debug: true,
-  connection: 'wss://localhost:3000',
+  connection: 'http://localhost:3000',
   options: {}
 }))
 
