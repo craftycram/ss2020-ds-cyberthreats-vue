@@ -4,7 +4,7 @@ import VueSocketIO from 'vue-socket.io'
 
 Vue.use(new VueSocketIO({
   debug: true,
-  connection: 'http://craftycram.goip.de:3001',
+  connection: 'https://craftycram.goip.de:3001',
   options: {}
 }))
 
