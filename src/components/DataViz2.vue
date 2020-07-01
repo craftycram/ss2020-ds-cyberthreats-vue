@@ -43,7 +43,7 @@ export default {
     }
   },
   mounted() {
-    axios.get('http://localhost:3000')
+    axios.get('http://craftycram.goip.de:3000')
       .then(response => {
         this.attacks = response.data;
         console.log(this.attacks[0]);
