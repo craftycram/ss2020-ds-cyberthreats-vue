@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import DataViz from './components/DataViz6.vue'
+import DataViz from './components/circles-by-destination.vue'
 
 export default {
   name: 'App',
