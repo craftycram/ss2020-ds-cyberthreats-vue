@@ -17,7 +17,9 @@ export default {
     return {
       attack: Object,
       zoom: 4,
+      yOffset: 100,
       attacks: {},
+      maxCircleRadius: 100,
     }
   },
   mounted() {
@@ -28,34 +30,38 @@ export default {
         this.attacks[country].push(data);
       } else {
         this.attacks[country] = [];
+        this.maxCircleRadius += 20;
         this.attacks[country].push(data);
       }
     });
   },
   methods: {
     setup(sketch) {
-      sketch.translate(sketch.width / 2, sketch.height / 2);
-      sketch.scale(1, -1);
       sketch.createCanvas(1800, 1000);
       sketch.background(230, 230, 230);
     },
     draw(sketch) {
-      const maxCircleRadius = 1000;
+      sketch.translate(sketch.width / 2, sketch.height / 2);
+      sketch.scale(1, 1);
+      sketch.clear();
+      sketch.background(230, 230, 230);
+      const color = sketch.color(255, 0, 0); // Define color 'c'
+      sketch.noStroke(); // Don't draw a stroke around shapes
+      sketch.fill(color); // Use color variable 'c' as fill color
+      
       let attackCount = 0;
-      sketch.fill(255);
-      for (let i = 0; i < Object.keys(this.attacks).length; i++) {
-        console.log(true);
-        const country = this.attacks[i];
+
+      for (const key in this.attacks) {
+        const country = this.attacks[key];
         attackCount += country.length;
       }
-      for (let i = 0; i < Object.keys(this.attacks).length; i++) {
-        const country = this.attacks[i];
-        const radius = (maxCircleRadius / attackCount) * country.length;
-        radius;
-        const colorDestination = sketch.color(255, 0, 0); // Define color 'c'
-        sketch.noStroke(); // Don't draw a stroke around shapes
-        sketch.fill(colorDestination); // Use color variable 'c' as fill color
-        sketch.circle(country[0].OriginCoords[0], country[0].OriginCoords[1], 10);
+
+      for (const key in this.attacks) {
+        const country = this.attacks[key];
+        const radius = (this.maxCircleRadius / attackCount) * country.length;
+        sketch.circle(country[0].DestinationCoords[1] * this.zoom, -country[0].DestinationCoords[0] * this.zoom * 2 + this.yOffset, radius);
+        //sketch.fill(0);
+        //sketch.text(country[0].Destination, country[0].DestinationCoords[1] * this.zoom, -country[0].DestinationCoords[0] * this.zoom * 2 + this.yOffset);
       }
     }
   },

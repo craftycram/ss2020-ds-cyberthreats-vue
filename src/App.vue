@@ -7,6 +7,7 @@
 
 <script>
 import DataViz from './components/circles-by-destination.vue'
+//import DataViz from './components/lines-with-dots.vue'
 
 export default {
   name: 'App',
