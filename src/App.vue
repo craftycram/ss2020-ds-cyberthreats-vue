@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import DataViz from './components/circles-by-origin.vue'
-//import DataViz from './components/lines-with-dots.vue'
+//import DataViz from './components/circles-by-origin.vue'
+import DataViz from './components/lines-with-dots.vue'
 
 export default {
   name: 'App',
