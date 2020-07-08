@@ -44,8 +44,8 @@ export default {
       for (let i = 0; i < this.attacks.length; i++) {
         const attack = this.attacks[i];
         const spacing = 10;
-        const posX = ((sketch.canvas.width / 2) - ((this.attacks.length * spacing) / 2)) + spacing * i;
-        sketch.line(posX, sketch.canvas.height / 2 + attack / 2, posX, sketch.canvas.height / 2 - attack / 2);
+        const posX = ((sketch.width / 2) - ((this.attacks.length * spacing) / 2)) + spacing * i;
+        sketch.line(posX, sketch.height / 2 + attack / 2, posX, sketch.height / 2 - attack / 2);
       }
     }
   },

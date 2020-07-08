@@ -39,7 +39,7 @@ export default {
       sketch.stroke(0);
       const distance = Math.sqrt(Math.pow((this.attack.OriginCoords[0] - this.attack.DestinationCoords[0]), 2) +  Math.pow((this.attack.OriginCoords[1] - this.attack.DestinationCoords[1]), 2));
       console.log(distance);
-      sketch.line(this.startX, sketch.canvas.height / 2 + distance / 2, this.startX, sketch.canvas.height / 2 - distance / 2);
+      sketch.line(this.startX, sketch.height / 2 + distance / 2, this.startX, sketch.height / 2 - distance / 2);
     }
   },
   render(h) {

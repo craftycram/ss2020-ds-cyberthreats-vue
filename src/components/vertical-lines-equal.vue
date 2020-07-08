@@ -41,10 +41,10 @@ export default {
       sketch.clear();
       sketch.background(230, 230, 230);
       sketch.stroke(0);
-      const spacing = sketch.canvas.width / this.attacks.length + 2
+      const spacing = sketch.width / this.attacks.length + 2
       for (let i = 0; i < this.attacks.length; i++) {
         const attack = this.attacks[i];
-        sketch.line(spacing * (i + 1), sketch.canvas.height / 2 + attack / 2, spacing * (i + 1), sketch.canvas.height / 2 - attack / 2);
+        sketch.line(spacing * (i + 1), sketch.height / 2 + attack / 2, spacing * (i + 1), sketch.height / 2 - attack / 2);
       }
     }
   },
