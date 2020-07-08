@@ -45,7 +45,7 @@ export default {
       sketch.scale(1, 1);
       sketch.clear();
       sketch.background(230, 230, 230);
-      const color = sketch.color(255, 0, 0); // Define color 'c'
+      const color = sketch.color(0); // Define color 'c'
       sketch.noStroke(); // Don't draw a stroke around shapes
       sketch.fill(color); // Use color variable 'c' as fill color
       
