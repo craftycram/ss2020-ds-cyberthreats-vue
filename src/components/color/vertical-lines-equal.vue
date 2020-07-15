@@ -35,12 +35,11 @@ export default {
       sketch.translate(sketch.width / 2, sketch.height / 2);
       sketch.scale(1, -1);
       sketch.createCanvas(1800, 1000);
-      sketch.background(230, 230, 230);
     },
     draw(sketch) {
       sketch.clear();
-      sketch.background(230, 230, 230);
-      sketch.stroke(0);
+      sketch.background(0);
+      sketch.stroke(255);
       const spacing = sketch.width / this.attacks.length + 2
       for (let i = 0; i < this.attacks.length; i++) {
         const attack = this.attacks[i];

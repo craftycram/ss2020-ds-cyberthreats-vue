@@ -1,11 +1,18 @@
 <template>
   <div>
-    <data-viz1></data-viz1>
-    <data-viz2></data-viz2>
-    <data-viz3></data-viz3>
-    <data-viz4></data-viz4>
-    <data-viz5></data-viz5>
-    <data-viz6></data-viz6>
+    <div>
+      <b-button v-on:click="count">Ansicht wechseln</b-button>
+      {{id}}
+    </div>
+    <br>
+    <div>
+      <data-viz1></data-viz1>
+      <data-viz2></data-viz2>
+      <data-viz3></data-viz3>
+      <data-viz4></data-viz4>
+      <data-viz5></data-viz5>
+      <data-viz6></data-viz6>
+    </div>
   </div>
 </template>
 
@@ -32,10 +39,18 @@ export default {
     return {
       id: 1,
     }
+  },
+  methods: {
+    count() {
+      if(this.id < 6) {
+        this.id++;
+      } else {
+        this.id = 1;
+      }
+    }
   }
 }
 </script>
 
 <style>
-
 </style>

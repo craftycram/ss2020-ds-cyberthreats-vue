@@ -33,10 +33,10 @@ export default {
       sketch.translate(sketch.width / 2, sketch.height / 2);
       sketch.scale(1, -1);
       sketch.createCanvas(1800, 1000);
-      sketch.background(230, 230, 230);
+      sketch.background(0);
     },
     draw(sketch) {
-      sketch.stroke(0);
+      sketch.stroke(255);
       const distance = Math.sqrt(Math.pow((this.attack.OriginCoords[0] - this.attack.DestinationCoords[0]), 2) +  Math.pow((this.attack.OriginCoords[1] - this.attack.DestinationCoords[1]), 2));
       console.log(distance);
       sketch.line(this.startX, sketch.height / 2 + distance / 2, this.startX, sketch.height / 2 - distance / 2);

@@ -38,11 +38,12 @@ export default {
   methods: {
     setup(sketch) {
       sketch.createCanvas(1800, 1000);
-      sketch.background(230, 230, 230);
+      sketch.background(0);
       //sketch.translate(sketch.width / 2, sketch.height / 2);
       // sketch.scale(1, 1);
     },
     draw(sketch) {      
+      sketch.stroke(255);
       const spacing = sketch.width / (this.countrys.length + 2);
       
       for (let i = 0; i < this.countrys.length; i++) {

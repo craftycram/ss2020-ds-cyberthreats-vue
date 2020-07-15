@@ -38,14 +38,13 @@ export default {
   methods: {
     setup(sketch) {
       sketch.createCanvas(1800, 1000);
-      sketch.background(230, 230, 230);
     },
     draw(sketch) {
       sketch.translate(sketch.width / 2, sketch.height / 2);
       sketch.scale(1, 1);
       sketch.clear();
-      sketch.background(230, 230, 230);
-      const color = sketch.color(0); // Define color 'c'
+      sketch.background(0);
+      const color = sketch.color(255); // Define color 'c'
       sketch.noStroke(); // Don't draw a stroke around shapes
       sketch.fill(color); // Use color variable 'c' as fill color
       
