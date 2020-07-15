@@ -5,22 +5,6 @@
       {{id}}
     </div>
     <br>
-    <!--<div>
-      <data-viz1 v-on:click="count" v-if="id==1"></data-viz1>
-      <data-viz2 v-on:click="count" v-if="id==2"></data-viz2>
-      <data-viz3 v-on:click="count" v-if="id==3"></data-viz3>
-      <data-viz4 v-on:click="count" v-if="id==4"></data-viz4>
-      <data-viz5 v-on:click="count" v-if="id==5"></data-viz5>
-      <data-viz6 v-on:click="count" v-if="id==6"></data-viz6>
-    </div>-->
-    <!--
-    <data-viz1 v-on:click="count" :class="changeClass(1)"></data-viz1>
-    <data-viz2 v-on:click="count" :class="changeClass(2)"></data-viz2>
-    <data-viz3 v-on:click="count" :class="changeClass(3)"></data-viz3>
-    <data-viz4 v-on:click="count" :class="changeClass(4)"></data-viz4>
-    <data-viz5 v-on:click="count" :class="changeClass(5)"></data-viz5>
-    <data-viz6 v-on:click="count" :class="changeClass(6)"></data-viz6>
-    -->
     <data-viz1 v-on:click="count" v-show="id==1"></data-viz1>
     <data-viz2 v-on:click="count" v-show="id==2"></data-viz2>
     <data-viz3 v-on:click="count" v-show="id==3"></data-viz3>
