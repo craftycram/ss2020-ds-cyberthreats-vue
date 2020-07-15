@@ -1,6 +1,6 @@
 <template>
       <div>
-          Attack from {{attack.Origin}} to {{attack.DestinationName}}
+          <!--Attack from {{attack.Origin}} to {{attack.DestinationName}}-->
           <vue-p5 v-on="this"></vue-p5>
       </div>
 </template>
@@ -34,7 +34,8 @@ export default {
     setup(sketch) {
       sketch.translate(sketch.width / 2, sketch.height / 2);
       sketch.scale(1, -1);
-      sketch.createCanvas(1800, 1000);
+      //sketch.createCanvas(1800, 1000);
+      sketch.createCanvas(sketch.displayWidth, sketch.displayHeight);
     },
     draw(sketch) {
       sketch.clear();
@@ -43,7 +44,7 @@ export default {
       const spacing = sketch.width / this.attacks.length + 2
       for (let i = 0; i < this.attacks.length; i++) {
         const attack = this.attacks[i];
-        sketch.line(spacing * (i + 1), sketch.height / 2 + attack / 2, spacing * (i + 1), sketch.height / 2 - attack / 2);
+        sketch.line(spacing * (i + 1), 0, spacing * (i + 1), attack * 5);
       }
     }
   },
