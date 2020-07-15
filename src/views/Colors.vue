@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div>
+    <!--<div>
       <b-button v-on:click="count">Ansicht wechseln</b-button>
       {{id}}
     </div>
-    <br>
+    <br>-->
     <data-viz1 v-on:click.native="count" v-show="id==1"></data-viz1>
     <data-viz2 v-on:click.native="count" v-show="id==2"></data-viz2>
     <data-viz3 v-on:click.native="count" v-show="id==3"></data-viz3>
