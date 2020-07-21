@@ -13,10 +13,10 @@
       @dismiss-count-down="countDownChanged"
       class="alert"
     >
-      <p>This website contains fast flashing images.</p>
-      <p>It may cause discomfort and trigger seizures for people with photosensitive epilepsy.</p>
-      <p>Viewers discretion ist advised. Safety first!</p>
-      <p>This alert will dismiss after {{ dismissCountDown }} seconds...</p>
+      <p>{{$t('alert1')}}</p>
+      <p>{{$t('alert2')}}</p>
+      <p>{{$t('alert3')}}</p>
+      <p>{{$t('alert4.1')}} {{ dismissCountDown }} {{$t('alert4.2')}}</p>
       <b-progress
         variant="danger"
         :max="dismissSecs"

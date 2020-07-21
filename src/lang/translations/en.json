@@ -1,4 +1,13 @@
 {
-  "translation1": "trans 1",
-  "translation2": "trans 2"
+  "lead": "Realtime visualization of worldwide cyberthreat data",
+  "tut-click": "Click on the screen to cycle the visualizations.",
+  "tut-move1": "Move your cursor to the left and right to change the color.",
+  "tut-move2": "Move it up and down to change the lightness.",
+  "btn-start": "Get started",
+  "btn-docu": "Documentation (DE)",
+  "alert1": "This website contains fast flashing images.",
+  "alert2": "It may cause discomfort and trigger seizures for people with photosensitive epilepsy.",
+  "alert3": "Viewers discretion ist advised. Safety first!",
+  "alert4.1": "This alert will dismiss after",
+  "alert4.2": "seconds…"
 }

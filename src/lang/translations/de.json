@@ -1,4 +1,13 @@
 {
-  "translation1": "Übersetzung 1",
-  "translation2": "Übersetzung 2"
+  "lead": "Echtzeit-Visualisierung weltweiter Daten zu Cyber-Bedrohungen",
+  "tut-click": "Klicken Sie auf den Bildschirm, um die Visualisierungen durchzuwechseln.",
+  "tut-move1": "Bewegen Sie Ihren Cursor nach links und rechts, um die Farbe zu ändern.",
+  "tut-move2": "Bewegen Sie ihn hoch und runter, um die Helligkeit zu verändern.",
+  "btn-start": "Los gehts",
+  "btn-docu": "Dokumentation",
+  "alert1": "Diese Website enthält schnell blinkende Bilder.",
+  "alert2": "Sie kann bei Menschen mit lichtempfindlicher Epilepsie Unbehagen verursachen und Anfälle auslösen.",
+  "alert3": "Den Zuschauern wird Diskretion empfohlen. Sicherheit geht vor!",
+  "alert4.1": "Diese Warnung schließt sich in",
+  "alert4.2": "Sekunden…"
 }

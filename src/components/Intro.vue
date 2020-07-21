@@ -1,18 +1,18 @@
 <template>
   <div class="main">
-    <b-jumbotron bg-variant="dark" header="Cyberthreats" lead="Realtime visualization of worldwide cyberthreat data">
+    <b-jumbotron bg-variant="dark" header="Cyberthreats" :lead="$t('lead')">
     <p>
       <b-icon icon="cursor" class="h2 mb-2" shift-v="-6"></b-icon>
-      Click on the screen to cycle the visualizations.
+      {{$t('tut-click')}}
     </p>
     <p>
       <b-icon icon="arrows-move" class="h2 mb-2" shift-v="-6"></b-icon>
-      Move your cursor to the left and right to change the color.
-      Move it up and down to change the lightness.
+      {{$t('tut-move1')}}
+      {{$t('tut-move2')}}
     </p>
     <br>
-    <b-button style="margin-right: 10px;" variant="primary" @click="$emit('start-event')">Get started</b-button>
-    <b-button variant="secondary" href="https://projects.hfg-gmuend.de/iot/2020ss-iot2-darstellensimulation/dokumentation-darstellen-simulation-viktoria-galver-marc-rufeis/einfuhrung">Documentation (DE)</b-button>
+    <b-button style="margin-right: 10px;" variant="primary" @click="$emit('start-event')">{{$t('btn-start')}}</b-button>
+    <b-button variant="secondary" href="https://projects.hfg-gmuend.de/iot/2020ss-iot2-darstellensimulation/dokumentation-darstellen-simulation-viktoria-galver-marc-rufeis/einfuhrung">{{$t('btn-docu')}}</b-button>
   </b-jumbotron>
   </div>
 </template>
