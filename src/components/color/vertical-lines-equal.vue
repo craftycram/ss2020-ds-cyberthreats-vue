@@ -35,7 +35,7 @@ export default {
     },
     draw(sketch) {  
       const hue = Math.floor(sketch.map(sketch.mouseX, 0, sketch.displayWidth, 0, 360));
-      const light = Math.floor(sketch.map(sketch.mouseY, 0, sketch.displayHeight, 10, 100))
+      const light = Math.floor(sketch.map(sketch.mouseY, 0, sketch.displayHeight, 100, 10));
       const color = sketch.color(`hsl(${hue}, 100%, ${light}%)`);
       sketch.clear();
       sketch.background(0);
