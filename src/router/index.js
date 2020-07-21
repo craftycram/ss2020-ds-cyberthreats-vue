@@ -33,7 +33,7 @@ Vue.use(VueRouter)
   ]
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash',
   base: 'ss2020-ds-cyberthreats-vue/',
   //base: process.env.BASE_URL,
   routes
