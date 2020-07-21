@@ -1,7 +1,7 @@
 <template>
       <div>
           <!--Attack from {{attack.Origin}} to {{attack.DestinationName}}-->
-          <vue-p5 v-on="this"></vue-p5>
+          <vue-p5 @setup="setup" @draw="draw" @click="$emit('click-event')"></vue-p5>
       </div>
 </template>
 
@@ -41,11 +41,14 @@ export default {
       sketch.createCanvas(sketch.displayWidth, sketch.displayHeight);
     },
     draw(sketch) {
-      sketch.translate(sketch.width / 2, sketch.height / 2);
-      sketch.scale(1, 1);
+      const hue = Math.floor(sketch.map(sketch.mouseX, 0, sketch.displayWidth, 0, 360));
+      const light = Math.floor(sketch.map(sketch.mouseY, 0, sketch.displayHeight, 10, 100))
+      const color = sketch.color(`hsl(${hue}, 100%, ${light}%)`);
       sketch.clear();
       sketch.background(0);
-      const color = sketch.color(255); // Define color 'c'
+      sketch.circle(sketch.mouseX, sketch.mouseY, 10);
+      sketch.translate(sketch.width / 2, sketch.height / 2);
+      sketch.scale(1, 1);
       sketch.noStroke(); // Don't draw a stroke around shapes
       sketch.fill(color); // Use color variable 'c' as fill color
       
@@ -64,13 +67,13 @@ export default {
         //sketch.text(country[0].OriginCode, country[0].OriginCoords[1] * this.zoom, -country[0].OriginCoords[0] * this.zoom * 2 + this.yOffset);
       }
     }
-  },
-  render(h) {
-    return h(VueP5, {on: this});
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
+* {
+  cursor: none;
+}
 </style>

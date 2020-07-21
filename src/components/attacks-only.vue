@@ -15,7 +15,6 @@ export default {
   },
   mounted() {
     this.sockets.subscribe('attack', (data) => {
-      console.log(data);
       this.attack = data;
     });
   }

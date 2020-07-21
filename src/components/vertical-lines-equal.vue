@@ -24,7 +24,6 @@ export default {
   },
   mounted() {
     this.sockets.subscribe('attack', (data) => {
-      console.log(data);
       this.attack = data;
       const distance = Math.sqrt(Math.pow((data.DestinationCoords[0] - data.OriginCoords[0]), 2) +  Math.pow((data.DestinationCoords[1] - data.OriginCoords[1]), 2));
       this.attacks.push(distance);

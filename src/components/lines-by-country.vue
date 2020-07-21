@@ -55,13 +55,8 @@ export default {
       }
       const xPosOrigin = this.finalCountrys.find((country) => this.attack.OriginCode == country.name).xPos;
       const xPosDestination = this.finalCountrys.find((country) => this.attack.Destination == country.name).xPos;
-      console.log(xPosOrigin);
-      console.log(xPosDestination);
       sketch.line(xPosOrigin, 0, xPosDestination, sketch.height);
     }
-  },
-  render(h) {
-    return h(VueP5, {on: this});
   }
 }
 </script>

@@ -1,7 +1,7 @@
 <template>
       <div>
           <!--Attack from {{attack.Origin}} to {{attack.DestinationName}}-->
-          <vue-p5 v-on="this"></vue-p5>
+          <vue-p5 @setup="setup" @draw="draw" @click="$emit('click-event')"></vue-p5>
       </div>
 </template>
 
@@ -24,7 +24,6 @@ export default {
   },
   mounted() {
     this.sockets.subscribe('attack', (data) => {
-      console.log(data);
       this.attack = data;
       const distance = Math.sqrt(Math.pow((data.DestinationCoords[0] - data.OriginCoords[0]), 2) +  Math.pow((data.DestinationCoords[1] - data.OriginCoords[1]), 2));
       this.attacks.push(distance);
@@ -37,24 +36,29 @@ export default {
       //sketch.createCanvas(1800, 1000);
       sketch.createCanvas(sketch.displayWidth, sketch.displayHeight);
     },
-    draw(sketch) {
+    draw(sketch) {  
+      const hue = Math.floor(sketch.map(sketch.mouseX, 0, sketch.displayWidth, 0, 360));
+      const light = Math.floor(sketch.map(sketch.mouseY, 0, sketch.displayHeight, 10, 100))
+      const color = sketch.color(`hsl(${hue}, 100%, ${light}%)`);
       sketch.clear();
       sketch.background(0);
-      sketch.stroke(255);
+      sketch.circle(sketch.mouseX, sketch.mouseY, 10);
+      sketch.fill(color);
+      sketch.stroke(color);
       for (let i = 0; i < this.attacks.length; i++) {
         const attack = this.attacks[i];
         const spacing = 10;
         const posX = ((sketch.width / 2) - ((this.attacks.length * spacing) / 2)) + spacing * i;
-        sketch.line(posX, sketch.height / 2 + attack / 2, posX, sketch.height / 2 - attack / 2);
+        sketch.line(posX, sketch.height / 2 + attack / 2 * 3, posX, sketch.height / 2 - attack / 2 * 3);
       }
     }
-  },
-  render(h) {
-    return h(VueP5, {on: this});
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
+* {
+  cursor: none;
+}
 </style>
