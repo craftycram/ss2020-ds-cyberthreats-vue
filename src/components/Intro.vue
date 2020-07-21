@@ -12,14 +12,28 @@
     </p>
     <br>
     <b-button style="margin-right: 10px;" variant="primary" @click="$emit('start-event')">{{$t('btn-start')}}</b-button>
-    <b-button variant="secondary" href="https://projects.hfg-gmuend.de/iot/2020ss-iot2-darstellensimulation/dokumentation-darstellen-simulation-viktoria-galver-marc-rufeis/einfuhrung">{{$t('btn-docu')}}</b-button>
+    <b-button style="margin-right: 70%;" variant="secondary" href="https://projects.hfg-gmuend.de/iot/2020ss-iot2-darstellensimulation/dokumentation-darstellen-simulation-viktoria-galver-marc-rufeis/einfuhrung">{{$t('btn-docu')}}</b-button>
+    <b-dropdown variant="secondary">
+      <template v-slot:button-content>
+        <b-icon icon="flag-fill" aria-hidden="true"></b-icon> {{$t('lang')}}
+      </template>
+
+      <b-dropdown-item-button @click="changeLang('de')">Deutsch</b-dropdown-item-button>
+      <b-dropdown-item-button @click="changeLang('en')">English</b-dropdown-item-button>
+    </b-dropdown>
   </b-jumbotron>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Intro'
+  name: 'Intro',
+  methods: {
+    changeLang(lang) {
+      this.$router.push(lang)
+      this.$i18n.locale = lang;
+    }
+  }
 }
 </script>
 

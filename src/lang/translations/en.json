@@ -9,5 +9,6 @@
   "alert2": "It may cause discomfort and trigger seizures for people with photosensitive epilepsy.",
   "alert3": "Viewers discretion ist advised. Safety first!",
   "alert4.1": "This alert will dismiss after",
-  "alert4.2": "seconds…"
+  "alert4.2": "seconds…",
+  "lang": "Language"
 }
