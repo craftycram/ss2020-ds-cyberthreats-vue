@@ -2,7 +2,7 @@
   <div class="main">
     <b-dropdown variant="secondary">
       <template v-slot:button-content>
-        <b-icon icon="flag-fill" aria-hidden="true"></b-icon> {{$t('lang')}}
+        <b-icon icon="flag" aria-hidden="true"></b-icon> {{$t('lang')}}
       </template>
 
       <b-dropdown-item-button @click="changeLang('de')">Deutsch</b-dropdown-item-button>
