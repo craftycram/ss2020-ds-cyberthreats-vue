@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Colors></Colors>
+    <Colors style="width: 100vw; height: 100vh;"></Colors>
     <!--<DataViz msg="Welcome to Your Vue.js App"/>-->
     <!--<img alt="Vue logo" src="./assets/logo.png">-->
   </div>

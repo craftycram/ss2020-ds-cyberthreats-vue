@@ -1,8 +1,5 @@
 <template>
-      <div>
-          <!--Attack from {{attack.Origin}} to {{attack.DestinationName}}-->
-          <vue-p5 class="p5" @setup="setup" @draw="draw" @mouseclicked="mouseclicked"></vue-p5>
-      </div>
+  <vue-p5 class="p5" @setup="setup" @draw="draw" @mouseclicked="mouseclicked"></vue-p5>
 </template>
 
 <script>

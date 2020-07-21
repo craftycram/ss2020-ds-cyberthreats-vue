@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="width: 100vw; height: 100vh;">
     <!--<div>
       <b-button v-on:click="count">Ansicht wechseln</b-button>
       {{id}}
@@ -11,6 +11,7 @@
       variant="danger"
       @dismissed="dismissCountDown=0"
       @dismiss-count-down="countDownChanged"
+      class="alert"
     >
       <p>This website contains fast flashing images.</p>
       <p>It may cause discomfort and trigger seizures for people with photosensitive epilepsy.</p>
@@ -24,13 +25,13 @@
       ></b-progress>
     </b-alert>
 
-    <intro @start-event="showAlert" v-show="id==0"></intro>
-    <data-viz1 v-on:click.native="count" v-show="id==1"></data-viz1>
-    <data-viz2 v-on:click.native="count" v-show="id==2"></data-viz2>
-    <data-viz3 v-on:click.native="count" v-show="id==3"></data-viz3>
-    <data-viz4 v-on:click.native="count" v-show="id==4"></data-viz4>
-    <data-viz5 v-on:click.native="count" v-show="id==5"></data-viz5>
-    <data-viz6 v-on:click.native="count" v-show="id==6"></data-viz6>
+    <intro class="viz" @start-event="showAlert" v-show="id==0"></intro>
+    <data-viz1 class="viz" v-on:click.native="count" v-show="id==1"></data-viz1>
+    <data-viz2 class="viz" v-on:click.native="count" v-show="id==2"></data-viz2>
+    <data-viz3 class="viz" v-on:click.native="count" v-show="id==3"></data-viz3>
+    <data-viz4 class="viz" v-on:click.native="count" v-show="id==4"></data-viz4>
+    <data-viz5 class="viz" v-on:click.native="count" v-show="id==5"></data-viz5>
+    <data-viz6 class="viz" v-on:click.native="count" v-show="id==6"></data-viz6>
   </div>
 </template>
 
@@ -97,5 +98,20 @@
   }
   .invisible {
     display: none;
+  }
+  
+  .alert {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+  }
+  .viz {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
   }
 </style>
