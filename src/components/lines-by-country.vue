@@ -27,7 +27,7 @@ export default {
     this.sockets.subscribe('attack', (data) => {
       this.attack = data;
     });
-    axios.get('http://82.165.116.159:3000/countrys')
+    axios.get('https://cyberthreats.marcrufeis.de:3000/countrys')
       .then(response => {
         this.countrys = response.data.countrys;
       })
