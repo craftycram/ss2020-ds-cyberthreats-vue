@@ -67,6 +67,7 @@
       },
       showAlert() {
         this.dismissCountDown = this.dismissSecs
+        this.count();
       },
       count() {
         console.log('click');
