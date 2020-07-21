@@ -6,7 +6,7 @@
       Click on the screen to cycle the visualizations.
     </p>
     <br>
-    <b-button style="margin-right: 10px;" variant="primary" @click="emit('click-event')">Get started</b-button>
+    <b-button style="margin-right: 10px;" variant="primary" @click="$emit('start-event')">Get started</b-button>
     <b-button variant="secondary" href="https://projects.hfg-gmuend.de/iot/2020ss-iot2-darstellensimulation/dokumentation-darstellen-simulation-viktoria-galver-marc-rufeis/einfuhrung">Documentation (DE)</b-button>
   </b-jumbotron>
   </div>
