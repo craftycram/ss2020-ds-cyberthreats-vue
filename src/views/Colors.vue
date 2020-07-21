@@ -55,11 +55,18 @@
       DataViz5,
       DataViz6,
     },
+    mounted() {
+      if (!this.$cookies.get('visited')) {
+        this.firstTime = true;
+        this.$cookies.set('visited','true', '30d');
+      }
+    },
     data: function () {
       return {
         id: 0,
         dismissSecs: 10,
         dismissCountDown: 0,
+        firstTime: false,
       }
     },
     methods: {
@@ -67,7 +74,9 @@
         this.dismissCountDown = dismissCountDown
       },
       showAlert() {
-        this.dismissCountDown = this.dismissSecs
+        if (this.firstTime) {
+          this.dismissCountDown = this.dismissSecs
+        }
         this.count();
       },
       count() {
