@@ -58,7 +58,7 @@
     data: function () {
       return {
         id: 0,
-        dismissSecs: 20,
+        dismissSecs: 10,
         dismissCountDown: 0,
       }
     },
