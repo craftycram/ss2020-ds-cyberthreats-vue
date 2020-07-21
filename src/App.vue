@@ -42,7 +42,6 @@ export default {
   font-family: 'Source Code Pro', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   background-color: #000000;
   color: #bacada;
   margin: 0px;
