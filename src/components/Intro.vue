@@ -8,7 +8,7 @@
       <b-dropdown-item-button @click="changeLang('de')">Deutsch</b-dropdown-item-button>
       <b-dropdown-item-button @click="changeLang('en')">English</b-dropdown-item-button>
     </b-dropdown>
-    
+
     <b-jumbotron bg-variant="dark" header="Cyberthreats" :lead="$t('lead')">
     <p>
       <b-icon icon="cursor" class="h2 mb-2" shift-v="-6"></b-icon>
@@ -31,8 +31,8 @@ export default {
   name: 'Intro',
   methods: {
     changeLang(lang) {
-      this.$router.push(lang)
       this.$i18n.locale = lang;
+      this.$router.push(lang)
     }
   }
 }
