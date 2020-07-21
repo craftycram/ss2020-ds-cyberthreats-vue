@@ -107,7 +107,7 @@
     z-index: 2;
   }
   .viz {
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: 100vh;
     top: 0px;
