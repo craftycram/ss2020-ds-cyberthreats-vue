@@ -7,6 +7,7 @@ import VueSocketIO from 'vue-socket.io'
 import { BootstrapVueIcons } from 'bootstrap-vue'
 import VueI18n from 'vue-i18n';
 import messages from './lang';
+import router from './router'
 
 Vue.use(BootstrapVueIcons)
 
@@ -27,5 +28,6 @@ Vue.config.productionTip = false
 
 new Vue({
   i18n,
-  render: h => h(App),
+  router,
+  render: h => h(App)
 }).$mount('#app')
