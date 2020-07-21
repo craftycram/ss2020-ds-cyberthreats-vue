@@ -5,6 +5,7 @@
       {{id}}
     </div>
     <br>-->
+    <intro v-show="id==0"></intro>
     <data-viz1 @click-event="count" v-show="id==1"></data-viz1>
     <data-viz2 @click-event="count" v-show="id==2"></data-viz2>
     <data-viz3 @click-event="count" v-show="id==3"></data-viz3>
@@ -15,6 +16,7 @@
 </template>
 
 <script>
+  import Intro from '../components/Intro.vue';
   import DataViz1 from '../components/color/circles-by-destination.vue';
   import DataViz2 from '../components/color/circles-by-origin.vue';
   import DataViz3 from '../components/color/lines-by-country.vue';
@@ -25,6 +27,7 @@
   export default {
     name: 'Colors',
     components: {
+      Intro,
       DataViz1,
       DataViz2,
       DataViz3,
@@ -34,7 +37,7 @@
     },
     data: function () {
       return {
-        id: 1,
+        id: 0,
       }
     },
     methods: {

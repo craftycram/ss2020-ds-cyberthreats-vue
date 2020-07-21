@@ -1,7 +1,7 @@
 <template>
       <div>
           <!--Attack from {{attack.Origin}} to {{attack.DestinationName}}-->
-          <vue-p5 @setup="setup" @draw="draw" @click="$emit('click-event')"></vue-p5>
+          <vue-p5 class="p5" @setup="setup" @draw="draw" @click="$emit('click-event')"></vue-p5>
       </div>
 </template>
 
@@ -57,7 +57,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-* {
+.p5 {
   cursor: none;
 }
 </style>
