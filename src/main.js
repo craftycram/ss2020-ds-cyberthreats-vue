@@ -16,7 +16,7 @@ Vue.use(BootstrapVueIcons)
 
 Vue.use(new VueSocketIO({
   debug: true,
-  connection: 'https://cyberthreats.marcrufeis.de:3001/',
+  connection: 'https://cyberlive.glados.itmr-dev.de/',
   options: {}
 }))
 

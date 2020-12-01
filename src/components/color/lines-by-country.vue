@@ -23,7 +23,7 @@ export default {
     }
   },
   mounted() {
-    axios.get('https://cyberthreats.marcrufeis.de:3000/countrys')
+    axios.get('https://cyberbackend.glados.itmr-dev.de/')
       .then(response => {
         this.countrys = response.data.countrys;
       })
